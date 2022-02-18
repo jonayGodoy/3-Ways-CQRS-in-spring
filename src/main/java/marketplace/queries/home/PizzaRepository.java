@@ -1,22 +1,30 @@
 package marketplace.queries.home;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Repository
 public class PizzaRepository implements IPizzaRepository{
 
+    private JdbcTemplate jdbcTemplate;
+
+    @Autowired
+    public PizzaRepository(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
     @Override
     public List<Pizza> getAll() {
-        return Arrays.asList(
-                new Pizza("bbq.png","bbq", 3.99f),
-                new Pizza("4Cheeses.png","4Cheeses", 4.99f),
-                new Pizza("carbonara.png","carbonara", 2.99f),
-                new Pizza("Cesar.png","Cesar", 5.99f),
-                new Pizza("hawaiana.PNG","hawaiana", -3.99f),
-                new Pizza("nachos.png","nachos", -30.99f)
-        );
+        var sqlQuery = "SELECT * FROM pizza";
+        return jdbcTemplate.queryForList(sqlQuery).stream()
+                .map((row) ->
+                        new Pizza(
+                                (String)row.get("img"),
+                                (String)row.get("name"),
+                                ((Double)row.get("priceineuros")).floatValue()
+                        )).toList();
     }
 }
