@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 
 @EnableAutoConfiguration
 @SpringBootApplication(
-        scanBasePackages = { "marketplace"},
+        scanBasePackages = { "marketplace", "backoffice"},
         exclude = {
             DataSourceAutoConfiguration.class,
             SecurityAutoConfiguration.class
