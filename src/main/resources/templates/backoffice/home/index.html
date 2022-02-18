@@ -11,11 +11,28 @@
         <a href="">Backoffice</a>
     </div>
     <header class="header">
-        <h1>Pizza Shop BackOffices</h1>
+        <h1>Pizza Shop Backoffices</h1>
         <span>The finest pizzas</span>
     </header>
     <main>
+        <form class="form" th:action="@{/pizza/create}"
+                th:object="${pizza}"
+                method="post">
+            <h2>Añade una nueva pizza</h2>
+            <div class="fields">
 
+                    <label>Nombre: </label>
+                    <input type="text" th:field="*{nombre}" />
+
+                    <label>Precio: </label>
+                    <input type="number" th:field="*{precio}" />
+
+                    <label>Imagen: </label>
+                    <input type="text" th:field="*{img}" />
+
+                <button type="submit">Crear</button>
+            </div>
+        </form>
     </main>
     <footer></footer>
 </body>
