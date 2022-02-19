@@ -6,13 +6,14 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+@Repository("MarketplacePizzaRepository")
 public class PizzaRepository implements IPizzaRepository{
 
     private JdbcTemplate jdbcTemplate;
 
     @Autowired
     public PizzaRepository(JdbcTemplate jdbcTemplate) {
+
         this.jdbcTemplate = jdbcTemplate;
     }
 

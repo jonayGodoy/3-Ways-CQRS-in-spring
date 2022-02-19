@@ -15,22 +15,29 @@
         <span>The finest pizzas</span>
     </header>
     <main>
-        <form class="form" th:action="@{/pizza/create}"
-                th:object="${pizza}"
-                method="post">
+
+
+
+        <!--/*@thymesVar id="addPizzaRequestDto" type="backoffice.commands.createPizza.AddPizzaRequestDto"*/-->
+        <form class="form"
+              action="#"
+              th:action="@{/backoffice}"
+              th:object="${addPizzaRequestDto}"
+              method="post">
             <h2>Añade una nueva pizza</h2>
+            <label>Nombre: </label>
+            <input type="text" th:field="*{name}" required/>
+
+            <label>Precio: </label>
+            <input type="number" th:field="*{price}" required/>
+
+            <label>Imagen: </label>
+            <input type="text" th:field="*{img}" required/>
+
+            <button type="submit">Añadir nueva pizza</button>
             <div class="fields">
 
-                    <label>Nombre: </label>
-                    <input type="text" th:field="*{nombre}" />
 
-                    <label>Precio: </label>
-                    <input type="number" th:field="*{precio}" />
-
-                    <label>Imagen: </label>
-                    <input type="text" th:field="*{img}" />
-
-                <button type="submit">Crear</button>
             </div>
         </form>
     </main>
