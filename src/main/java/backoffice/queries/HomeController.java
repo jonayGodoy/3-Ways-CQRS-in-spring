@@ -17,9 +17,4 @@ public class HomeController {
                 "addPizzaRequestDto",
                 new AddPizzaRequestDto());
     }
-
-    @GetMapping("/backoffice2")
-    public String home2(Model model) {
-        return "backoffice/home/index";
-    }
 }

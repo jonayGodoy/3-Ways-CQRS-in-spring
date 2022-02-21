@@ -12,6 +12,7 @@ public class GetPizzas {
 
     @Autowired
     public GetPizzas(PizzaRepository repository) {
+
         this.repository = repository;
     }
 
