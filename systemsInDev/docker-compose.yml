@@ -3,7 +3,7 @@ services :
   db:
     image: postgres:10-alpine
     ports:
-      - "5432:5432"
+      - 5432:5432
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
@@ -17,3 +17,11 @@ services :
       - db
     ports:
       - 5433:8080
+  rabbitmq:
+    image: rabbitmq:3.9.13-management
+    hostname: my-rabbit
+    depends_on:
+      - db
+    ports:
+      - 5672:5672
+      - 15672:15672
