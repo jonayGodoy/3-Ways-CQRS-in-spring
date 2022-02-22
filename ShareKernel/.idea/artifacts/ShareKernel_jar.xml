@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ShareKernel:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ShareKernel_jar</output-path>
+    <root id="archive" name="ShareKernel.jar">
+      <element id="module-output" name="ShareKernel" />
+    </root>
+  </artifact>
+</component>

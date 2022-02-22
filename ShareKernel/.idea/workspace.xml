@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ShareKernel:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="84d41643-5856-4f42-a83c-40773ca0e9ff" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ShareKernel_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/backoffices/messages/PizzaCreatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApplication/src/main/java/com/proofofconcept/cqrs/Configuration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApplication/src/main/java/infrastructure/MessageQueues/IMessageQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApplication/src/main/java/infrastructure/MessageQueues/MessageQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApplication/src/main/java/infrastructure/MessageQueues/SentEventUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApplication/src/main/java/infrastructure/MessageQueues/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Handlers/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Handlers/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Handlers/src/main/java/com/handlers/handlers/HandlersApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Handlers/src/main/java/com/handlers/handlers/HandlersApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Handlers/src/main/java/com/handlers/handlers/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Handlers/src/main/java/com/handlers/handlers/Receiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Handlers/src/main/java/com/handlers/handlers/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Handlers/src/main/java/com/handlers/handlers/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApplication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApplication/src/main/java/backoffice/commands/createPizza/CreatePizzaCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication/src/main/java/backoffice/commands/createPizza/CreatePizzaCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApplication/src/main/java/com/proofofconcept/cqrs/CqrsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication/src/main/java/com/proofofconcept/cqrs/CqrsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApplication/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="25TpHemk3KrN78VzURuPQC3ZO0I" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.28150874" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jonay\Desktop\cqrs-proof-of-concept\ShareKernel\src\main\java\backoffices\messages" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="84d41643-5856-4f42-a83c-40773ca0e9ff" name="Changes" comment="" />
+      <created>1645560847750</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645560847750</updated>
+      <workItem from="1645560849286" duration="1314000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
