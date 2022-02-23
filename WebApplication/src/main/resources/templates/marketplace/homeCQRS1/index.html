@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Shop</title>
+    <link th:href="@{/css/marketplace-styles.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div>
+        <a th:href="@{/home1}">Marketplace1</a>
+        <a th:href="@{/backoffice1}">Backoffice1</a>
+        <a th:href="@{/home2}">Marketplace2</a>
+        <a th:href="@{/backoffice2}">Backoffice2</a>
+        <a th:href="@{/home3}">Marketplace3</a>
+        <a th:href="@{/backoffice3}">Backoffice3</a>
+    </div>
+    <header class="header">
+        <h1>Pizza Shop</h1>
+        <h2>Menu</h2>
+        <span>The finest pizzas</span>
+    </header>
+    <main>
+        <div class="pizzas">
+            <!--/*@thymesVar id="pizza" type="marketplace.queries.homeCQRS1.HomeController.PizzaDto"*/-->
+            <div th:each="pizza: ${pizzas}" class="pizza-box">
+                <img alt="pizza-photo" th:src="${'/marketplace/home/assets/' + pizza.img}">
+                <span class="title" th:text="${'Pizza ' + pizza.name}"></span>
+                <span class="price" th:text="${pizza.price}"></span>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

@@ -9,29 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84d41643-5856-4f42-a83c-40773ca0e9ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ShareKernel_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/backoffices/messages/PizzaCreatedEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebApplication/src/main/java/com/proofofconcept/cqrs/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebApplication/src/main/java/infrastructure/MessageQueues/IMessageQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebApplication/src/main/java/infrastructure/MessageQueues/MessageQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebApplication/src/main/java/infrastructure/MessageQueues/SentEventUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebApplication/src/main/java/infrastructure/MessageQueues/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Handlers/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Handlers/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Handlers/src/main/java/com/handlers/handlers/HandlersApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Handlers/src/main/java/com/handlers/handlers/HandlersApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Handlers/src/main/java/com/handlers/handlers/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Handlers/src/main/java/com/handlers/handlers/Receiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Handlers/src/main/java/com/handlers/handlers/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Handlers/src/main/java/com/handlers/handlers/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication/src/main/java/backoffice/commands/createPizza/CreatePizzaCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication/src/main/java/backoffice/commands/createPizza/CreatePizzaCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication/src/main/java/com/proofofconcept/cqrs/CqrsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication/src/main/java/com/proofofconcept/cqrs/CqrsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="84d41643-5856-4f42-a83c-40773ca0e9ff" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1645560847750</updated>
-      <workItem from="1645560849286" duration="1314000" />
+      <workItem from="1645560849286" duration="1316000" />
     </task>
     <servers />
   </component>
