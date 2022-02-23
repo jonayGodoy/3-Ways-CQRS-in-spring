@@ -19,7 +19,7 @@ public class PizzaRepository implements IPizzaRepository {
 
     @Override
     public List<Pizza> getAll() {
-        var sqlQuery = "SELECT * FROM pizza";
+        var sqlQuery = "SELECT * FROM pizza2";
         return jdbcTemplate.queryForList(sqlQuery).stream()
                 .map((row) ->
                         new Pizza(

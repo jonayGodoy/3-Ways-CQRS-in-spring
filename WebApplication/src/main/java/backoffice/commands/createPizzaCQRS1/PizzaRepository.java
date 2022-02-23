@@ -17,7 +17,7 @@ public class PizzaRepository implements IPizzaRepository {
     }
 
     public Pizza CreatePizza(Pizza pizza) {
-        var sql = "INSERT INTO pizza (name, img, priceInEuros) VALUES (?, ?, ?)";
+        var sql = "INSERT INTO pizza1 (name, img, priceInEuros) VALUES (?, ?, ?)";
         try {
             jdbcTemplate.update(
                     sql,
