@@ -27,6 +27,9 @@ public class Migrator implements CommandLineRunner {
 
         var sqlQuery = "SELECT * FROM pizza2";
 
+        log.info("Deleting old Records");
+        mongoTemplate.dropCollection("pizzas");
+
         var pizzas = jdbcTemplate.queryForList(sqlQuery).stream()
                 .map((row) ->
                         new MongoTempPizza(
@@ -34,6 +37,7 @@ public class Migrator implements CommandLineRunner {
                                 (String)row.get("name"),
                                 row.get("priceineuros").toString()
                         )).toList();
-         mongoTemplate.insertAll(pizzas);
+        mongoTemplate.insertAll(pizzas);
+        log.info("All pizzas was copied correctly");
     }
 }

@@ -1,31 +1,36 @@
 package marketplace.queries.homeCQRS2;
 
+import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository("MarketplacePizzaRepository2")
 public class PizzaRepository implements IPizzaRepository {
 
-    private final JdbcTemplate jdbcTemplate;
+    private final MongoTemplate mongoTemplate;
 
     @Autowired
-    public PizzaRepository(JdbcTemplate jdbcTemplate) {
+    public PizzaRepository(MongoTemplate mongoTemplate) {
 
-        this.jdbcTemplate = jdbcTemplate;
+        this.mongoTemplate = mongoTemplate;
     }
 
     @Override
     public List<Pizza> getAll() {
-        var sqlQuery = "SELECT * FROM pizza2";
-        return jdbcTemplate.queryForList(sqlQuery).stream()
-                .map((row) ->
-                        new Pizza(
-                                (String)row.get("img"),
+        final List<Document> results = new ArrayList<>();
+        var a = mongoTemplate
+                .getCollection("pizzas")
+                .find()
+                .into(results);
+
+        return results.stream().map((row) ->
+                        new Pizza((String)row.get("img"),
                                 (String)row.get("name"),
-                                ((Double)row.get("priceineuros")).floatValue()
+                                (Float.parseFloat((String)row.get("priceineuros")))
                         )).toList();
     }
 }
