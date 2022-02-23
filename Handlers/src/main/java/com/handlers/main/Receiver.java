@@ -1,18 +1,22 @@
-package com.handlers.handlers;
+package com.handlers.main;
 
 import backoffices.messages.PizzaCreatedEvent;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.amqp.core.Message;
+import com.handlers.main.handlers.PizzaCreatedEvent.PizzaCreatedEventHandler;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
 import java.util.concurrent.CountDownLatch;
 
 @Component
 public class Receiver {
 
+    private final PizzaCreatedEventHandler pizzaCreatedEventHandler;
     private CountDownLatch latch = new CountDownLatch(1);
+
+    @Autowired
+    public Receiver(PizzaCreatedEventHandler pizzaCreatedEventHandler) {
+        this.pizzaCreatedEventHandler = pizzaCreatedEventHandler;
+    }
 
     public void receiveMessage(String message) {
         System.out.println("Received <" + message + ">");
@@ -20,9 +24,7 @@ public class Receiver {
     }
 
     public void receiveMessage(PizzaCreatedEvent message) {
-
-        System.out.println("Received <" + message.name + ">");
-        latch.countDown();
+        pizzaCreatedEventHandler.handle(message);
     }
 
     public CountDownLatch getLatch() {
