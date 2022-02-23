@@ -9,6 +9,10 @@ import java.util.logging.Logger;
 @Component
 public class Migrator implements CommandLineRunner {
 
+
+
+
+
     @Override
     public void run(String... args) throws Exception {
         var log = Logger.getLogger("Migration Process");

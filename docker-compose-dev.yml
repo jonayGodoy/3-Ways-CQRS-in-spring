@@ -34,6 +34,8 @@ services :
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - ${PWD}/mongo_migrations:/docker-entrypoint-initdb.d/mongo-init.js:ro
     depends_on:
       - db
   mongo-express:

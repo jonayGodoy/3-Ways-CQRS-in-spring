@@ -7,12 +7,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.XADataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 
-@SpringBootApplication(exclude = {
-        DataSourceAutoConfiguration.class,
-        XADataSourceAutoConfiguration.class,
-        MongoAutoConfiguration.class,
-        MongoDataAutoConfiguration.class
-})
+@SpringBootApplication()
 public class MigratorApplication {
 
     public static void main(String[] args) {
