@@ -1,3 +1,13 @@
+CREATE TABLE commandRequestEvents
+(
+	id SERIAL,
+	className VARCHAR(255) NOT NULL,
+	time_stamp TIMESTAMP NOT NULL,
+    datajson jsonb NOT NULL,
+	PRIMARY KEY(id)
+);
+
+
 CREATE TABLE pizza1
 (
 	id SERIAL,

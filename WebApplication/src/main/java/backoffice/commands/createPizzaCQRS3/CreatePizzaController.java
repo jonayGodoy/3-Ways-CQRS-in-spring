@@ -1,5 +1,6 @@
 package backoffice.commands.createPizzaCQRS3;
 
+import backoffice.commands.createPizzaCQRS3.EventBus.CommandEventBus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

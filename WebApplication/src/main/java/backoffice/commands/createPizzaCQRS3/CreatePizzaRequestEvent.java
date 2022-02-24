@@ -1,5 +1,6 @@
 package backoffice.commands.createPizzaCQRS3;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;;
 
 public class CreatePizzaRequestEvent implements RequestEvent {
@@ -41,5 +42,14 @@ public class CreatePizzaRequestEvent implements RequestEvent {
     @Override
     public LocalDateTime getTimespan() {
         return timespan;
+    }
+
+    @Override
+    public <T extends Serializable> T getSerializable() {
+        var serializableRequest = new createPizzaRequestEventSerializable();
+        serializableRequest.img=img;
+        serializableRequest.name=name;
+        serializableRequest.price=price;
+        return (T) serializableRequest;
     }
 }
