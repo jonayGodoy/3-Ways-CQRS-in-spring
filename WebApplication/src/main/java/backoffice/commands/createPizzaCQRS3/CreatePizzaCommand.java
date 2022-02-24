@@ -6,14 +6,15 @@ import org.springframework.stereotype.Component;
 @Component("CreatePizzaCommand3")
 public class CreatePizzaCommand {
 
-    private PizzaRepository repository;
+    private final PizzaRepository repository;
 
     @Autowired
     public CreatePizzaCommand(PizzaRepository repository) {
         this.repository = repository;
     }
 
-    public Pizza Execute(CreatePizzaRequest request){
+
+    public Pizza Execute(CreatePizzaRequestEvent request){
             var pizza = new Pizza(
                     request.getImg(),
                     request.getName(),

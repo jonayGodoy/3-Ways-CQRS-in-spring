@@ -11,19 +11,19 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller("CreatePizzaController3")
 public class CreatePizzaController {
 
-    private final CreatePizzaCommand command;
+    private final CommandEventBus bus;
 
     @Autowired
-    public CreatePizzaController(CreatePizzaCommand command) {
-        this.command = command;
+    public CreatePizzaController(CommandEventBus command) {
+        this.bus = command;
     }
 
     @PostMapping("/backoffice3")
     public ModelAndView Execute(
             @ModelAttribute("addPizzaRequestDto") AddPizzaRequestDto dto,
             Model model){
-        var request = CreatePizzaRequest.create(dto);
-        var pizza = command.Execute(request);
+        var request = CreatePizzaRequestEvent.create(dto);
+        Pizza pizza = bus.RaiseEvent(request);
         model.addAttribute("addPizzaRequestDto", new AddPizzaRequestDto());
         /*
         return pizza == null
