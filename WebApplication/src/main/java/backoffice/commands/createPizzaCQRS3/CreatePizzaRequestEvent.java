@@ -1,12 +1,15 @@
 package backoffice.commands.createPizzaCQRS3;
 
+import java.time.LocalDateTime;;
 
 public class CreatePizzaRequestEvent implements RequestEvent {
     private final String img;
     private final String name;
     private final float price;
+    private LocalDateTime timespan;
 
     public CreatePizzaRequestEvent(String img, String name, float price) {
+        timespan = LocalDateTime.now();
         this.img = img;
         this.name = name;
         this.price = price;
@@ -33,5 +36,10 @@ public class CreatePizzaRequestEvent implements RequestEvent {
                 dto.getImg(),
                 dto.getName(),
                 formatPrice(dto.getPrice()));
+    }
+
+    @Override
+    public LocalDateTime getTimespan() {
+        return timespan;
     }
 }

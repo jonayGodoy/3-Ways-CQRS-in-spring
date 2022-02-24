@@ -1,5 +1,7 @@
 package backoffice.commands.createPizzaCQRS3;
 
-public interface RequestEvent {
+import java.time.LocalDateTime;
 
+public interface RequestEvent {
+    LocalDateTime getTimespan();
 }
