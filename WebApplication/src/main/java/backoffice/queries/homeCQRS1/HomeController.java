@@ -10,8 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class HomeController {
 
     @GetMapping("/backoffice1")
-    public ModelAndView home(Model model) {
-        model.addAttribute("addPizzaRequestDto", new AddPizzaRequestDto());
+    public ModelAndView home() {
         return new ModelAndView(
                 "backoffice/homeCQRS1/index",
                 "addPizzaRequestDto",
