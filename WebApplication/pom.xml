@@ -81,7 +81,7 @@
             <artifactId>shareKernel</artifactId>
             <version>1.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/resources/prod-web-application-properties/ShareKernel.jar</systemPath>
+            <systemPath>src/main/resources/lib/ShareKernel.jar</systemPath>
         </dependency>
     </dependencies>
 
