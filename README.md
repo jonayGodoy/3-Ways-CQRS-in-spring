@@ -1,3 +1,6 @@
+This a breakeable toy with three differents ways to implemented CQRS
+
+
 
 
 #Boot dev environment

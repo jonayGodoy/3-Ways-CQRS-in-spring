@@ -76,6 +76,13 @@
             <artifactId>mongodb-driver-sync</artifactId>
             <version>4.4.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.shareKernel</groupId>
+            <artifactId>shareKernel</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/prod-web-application-properties/ShareKernel.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>

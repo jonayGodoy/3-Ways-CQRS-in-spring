@@ -7,6 +7,7 @@ services :
       - "5000:8080"
     depends_on:
       - db
+      - mongo
   db:
     image: postgres:10-alpine
     environment:
@@ -15,3 +16,37 @@ services :
       POSTGRES_DB: CQRS_proof_of_concept
     volumes:
       - ${PWD}/migrations:/docker-entrypoint-initdb.d
+  admin:
+    image: adminer
+    restart: always
+    depends_on: 
+      - db
+    ports:
+      - 5001:8080
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - ${PWD}/mongo_migrations:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    depends_on:
+      - db
+  mongo-express:
+    image: mongo-express
+    restart: always
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+    depends_on:
+      - mongo
+  rabbitmq:
+    image: rabbitmq:3.9.13-management
+    hostname: my-rabbit
+    depends_on:
+      - db
+    ports:
+      - 5672:5672
+      - 15672:15672
