@@ -38,10 +38,12 @@
 
             <button type="submit">Añadir nueva pizza</button>
             <div class="fields">
-
-
             </div>
         </form>
+        <!--/*@thymesVar id="pizzaResponseDto" type="backoffice.commands.createPizzaCQRS2.PizzaResponseDto"*/-->
+        <div th:if="${pizzaResponseDto != null}">
+            <h3 th:text="${'La pizza '+pizzaResponseDto.getName()+', fue creada exitosamente'}"></h3>
+        </div>
     </main>
     <footer></footer>
 </body>

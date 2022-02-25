@@ -1,5 +1,6 @@
 package backoffice.commands.createPizzaCQRS3;
 
+import backoffice.commands.createPizzaCQRS3.PizzaResponseDto;
 import backoffice.commands.createPizzaCQRS3.EventBus.CommandEventBus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
-
 
 @Controller("CreatePizzaController3")
 public class CreatePizzaController {
@@ -26,16 +26,10 @@ public class CreatePizzaController {
         var request = CreatePizzaRequestEvent.create(dto);
         Pizza pizza = bus.RaiseEvent(request);
         model.addAttribute("addPizzaRequestDto", new AddPizzaRequestDto());
-        /*
-        return pizza == null
-                ?  new ResponseEntity(HttpStatus.OK)
-                :  new ResponseEntity(HttpStatus.BAD_REQUEST);
-
-         */
         return new ModelAndView(
                 "backoffice/homeCQRS3/index",
-                "addPizzaRequestDto",
-                new AddPizzaRequestDto());
+                "pizzaResponseDto",
+                new PizzaResponseDto(pizza));
     }
 }
 
