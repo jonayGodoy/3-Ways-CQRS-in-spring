@@ -9,7 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84d41643-5856-4f42-a83c-40773ca0e9ff" name="Changes" comment="" />
+    <list default="true" id="84d41643-5856-4f42-a83c-40773ca0e9ff" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../migrations/database.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mongo_migrations/mongo-init.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1645560847750</updated>
       <workItem from="1645560849286" duration="1316000" />
+      <workItem from="1645787635437" duration="116000" />
     </task>
     <servers />
   </component>
