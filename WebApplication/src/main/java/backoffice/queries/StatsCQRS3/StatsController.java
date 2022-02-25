@@ -19,11 +19,11 @@ public class StatsController {
 
     @GetMapping("/backoffice3/stats")
     public ModelAndView home() {
-        var requestDto =  repository.getStats();
+        var responseDto =  repository.getStats();
         return new ModelAndView(
                 "backoffice/StatsCQRS3/index",
                 "backofficeStats",
-                new BackofficeStatsRequestDto(requestDto));
+                responseDto);
     }
 
 }
