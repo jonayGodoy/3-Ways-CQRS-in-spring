@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Pizza Shop Backoffice Stats</title>
-   <!-- <link th:href="@{/css/marketplace-styles.css}" rel="stylesheet" type="text/css">
-   -->
+    <link th:href="@{/css/backoffice-styles.css}" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div>
@@ -22,17 +21,19 @@
         <span>The finest pizzas</span>
     </header>
     <main>
-        <div class="pizzas">
+        <div class="backofficeStats">
             <!--/*@thymesVar id="backofficeStats" type="backoffice.queries.StatsCQRS3.BackofficeStatsRequestDto"*/-->
-            <div>
-                <span>Cantidad de pizzas creadas en el backoffice con la imagen quad.png</span>
+            <div class="getQuantityImg">
+                <span>Cantidad de pizzas creadas en el backoffice con la imagen "quad.png":</span>
                 <span class="title" th:text="${backofficeStats.getQuantityImgDtoWhenCreatedPizza()}"></span>
             </div>
 
-            <div th:each="stats: ${backofficeStats.getStats()}" class="pizza-box">
-                <span class="title" th:text="${stats.getClassName()}"></span>
-                <span class="title" th:text="${stats.getTime_stamp()}"></span>
-                <span class="price" th:text="${stats.getDatajson()}"></span>
+            <div class="stat-container">
+                <div th:each="stats: ${backofficeStats.getStats()}" class="stats">
+                    <span class="title" th:text="${stats.getClassName()}"></span>
+                    <span class="title" th:text="${stats.getTime_stamp()}"></span>
+                    <span class="price" th:text="${stats.getDatajson()}"></span>
+                </div>
             </div>
         </div>
     </main>
