@@ -20,21 +20,13 @@ public class CreatePizzaController {
 
     @PostMapping("/backoffice1")
     public ModelAndView Execute(
-            @ModelAttribute("addPizzaRequestDto") AddPizzaRequestDto dto,
-            Model model){
+            @ModelAttribute("addPizzaRequestDto") AddPizzaRequestDto dto){
         var request = CreatePizzaRequest.create(dto);
         var pizza = command.Execute(request);
-        model.addAttribute("addPizzaRequestDto", new AddPizzaRequestDto());
-        /*
-        return pizza == null
-                ?  new ResponseEntity(HttpStatus.OK)
-                :  new ResponseEntity(HttpStatus.BAD_REQUEST);
-
-         */
-        return new ModelAndView(
+           return new ModelAndView(
                 "backoffice/homeCQRS1/index",
-                "addPizzaRequestDto",
-                new AddPizzaRequestDto());
+                "pizzaResponseDto",
+                new PizzaResponseDto(pizza));
     }
 }
 
