@@ -5,7 +5,5 @@ COPY pom.xml /home/app
 RUN mvn -f /home/app/pom.xml clean package -Dmaven.test.skip
  
 FROM openjdk:17-jdk-alpine
-EXPOSE 8080
 COPY --from=build /home/app/target/Handlers-0.0.1-SNAPSHOT.jar /usr/local/lib/demo.jar
-EXPOSE 8080
 ENTRYPOINT ["java","-jar","/usr/local/lib/demo.jar"]
