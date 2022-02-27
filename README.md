@@ -11,8 +11,8 @@ I implemented a simple event bus. That event bus works as a layer between
 command and controller. Which, in theory, allow more flexibility
 and it also allows better traceability because you can save all command request.
 
-# Boot
+# Start
 docker-compose up
 
-# Boot dev environment
+# Start dev environment
 docker-compose -f docker-compose-dev.yml -p develoment_CQRS_environment up -d
