@@ -1,0 +1,11 @@
+- create repositories in the migrator
+
+- use rabbitmq o something similar to cqrs3 in command bus or create new
+a version of cqrs
+
+-do cqrs course o codelytv and add that version
+
+- separate infraesctructure and application layer to domain
+
+- ¿¿move queries to application layer o infraesctructure layer???
+
