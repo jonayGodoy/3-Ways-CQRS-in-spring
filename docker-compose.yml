@@ -11,7 +11,6 @@ services :
       - db
       - mongo
       - rabbitmq
-      - migrator
       - handlers
   handlers:
     container_name: handlers
@@ -22,11 +21,10 @@ services :
       - db
       - mongo
       - rabbitmq
-      - migrator
-  migrator:
-    container_name: migrator
+  view_synchronizer:
+    container_name: view_synchronizer
     build: 
-     context: ${PWD}/Migrator
+     context: ${PWD}/ViewSynchronizer
      dockerfile: Dockerfile
     depends_on:
       - db
@@ -41,14 +39,12 @@ services :
       - ${PWD}/migrations:/docker-entrypoint-initdb.d
   admin:
     image: adminer
-    restart: always
     depends_on: 
       - db
     ports:
       - 5001:8080
   mongo:
     image: mongo
-    restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
@@ -58,7 +54,6 @@ services :
       - db
   mongo-express:
     image: mongo-express
-    restart: always
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: example

@@ -16,6 +16,11 @@ public class Receiver {
     @Autowired
     public Receiver(PizzaCreatedEventHandler pizzaCreatedEventHandler) {
         this.pizzaCreatedEventHandler = pizzaCreatedEventHandler;
+
+
+
+
+
     }
 
     public void receiveMessage(String message) {

@@ -22,8 +22,9 @@ public class CreatePizzaCommand {
                     request.getImg(),
                     request.getName(),
                     request.getPrice());
-             queue.sendA(createPizzaCreatedEvent(pizza));
-        return repository.CreatePizza(pizza);
+            var result = repository.CreatePizza(pizza);
+              queue.sendA(createPizzaCreatedEvent(pizza));
+        return result;
     }
 
     public PizzaCreatedEvent createPizzaCreatedEvent(Pizza pizza) {

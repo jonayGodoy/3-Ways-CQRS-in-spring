@@ -9,3 +9,24 @@ a version of cqrs
 
 - move queries to application layer o infraesctructure layer???
 
+-cambiar nombre a syncronizador de vistas
+
+
+-invertir primero carpeta de caso y luego dentro la carpeta comand o query
+
+
+- recuerda que no siempre se necesita rabbitmq
+
+-eliminar el topic si es necesario y cambiar el exchange routing key 
+
+-cambiar el nombre the sharekernel to share
+
+
+-quizas multiaplicaciones en spring con diferentes applications.class
+
+
+-añadir al readme, explicacion de cada estilo y añadir que la sync no necesita rabbitmq
+
+-empezar a añadir la versión de codelytv de cqrs
+
+-añadir el readme,y de Command es un dto de Command del GoF (libro Design Patterns)
