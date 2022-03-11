@@ -1,4 +1,4 @@
-package app.cqrs.controllers.createPizzaControllerCQRS1;
+package com.webApplication.controllers.createPizzaControllerCQRS1;
 
 import domain.backoffice.createPizzaCQRS1.command.Pizza;
 

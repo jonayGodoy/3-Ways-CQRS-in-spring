@@ -9,8 +9,6 @@ a version of cqrs
 
 - move queries to application layer o infraesctructure layer???
 
--cambiar nombre a syncronizador de vistas
-
 
 -invertir primero carpeta de caso y luego dentro la carpeta comand o query
 
@@ -18,9 +16,6 @@ a version of cqrs
 - recuerda que no siempre se necesita rabbitmq
 
 -eliminar el topic si es necesario y cambiar el exchange routing key 
-
--cambiar el nombre the sharekernel to share
-
 
 -quizas multiaplicaciones en spring con diferentes applications.class
 

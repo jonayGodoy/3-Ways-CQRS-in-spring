@@ -1,4 +1,4 @@
-package app.cqrs.pages.marketplaceHomeCQRS1.queries.getPizzas;
+package com.webApplication.pages.marketplaceHomeCQRS1.queries.getPizzas;
 
 public class Pizza {
     private final String img;

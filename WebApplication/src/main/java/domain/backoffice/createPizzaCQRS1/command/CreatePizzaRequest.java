@@ -1,4 +1,4 @@
-package domain.backoffice.createPizzaCQRS1;
+package domain.backoffice.createPizzaCQRS1.command;
 
 public class CreatePizzaRequest {
     private final String img;

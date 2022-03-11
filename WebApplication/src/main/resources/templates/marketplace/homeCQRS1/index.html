@@ -22,7 +22,7 @@
     </header>
     <main>
         <div class="pizzas">
-            <!--/*@thymesVar id="pizza" type="marketplace.queries.homeCQRS1.HomeController.PizzaDto"*/-->
+            <!--/*@thymesVar id="pizza" type="com.webApplication.pages.marketplaceHomeCQRS1.HomeController.PizzaDto"*/-->
             <div th:each="pizza: ${pizzas}" class="pizza-box">
                 <img alt="pizza-photo" th:src="${'/marketplace/home/assets/' + pizza.img}">
                 <span class="title" th:text="${'Pizza ' + pizza.name}"></span>

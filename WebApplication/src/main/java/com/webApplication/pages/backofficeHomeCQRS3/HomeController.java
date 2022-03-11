@@ -1,4 +1,4 @@
-package app.cqrs.pages.backofficeHomeCQRS3;
+package com.webApplication.pages.backofficeHomeCQRS3;
 
 import domain.backoffice.createPizzaCQRS1.command.AddPizzaRequestDto;
 import org.springframework.stereotype.Controller;

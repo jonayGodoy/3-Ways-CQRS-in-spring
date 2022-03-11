@@ -1,4 +1,4 @@
-package domain.backoffice.createPizzaCQRS3.createPizzaCQRS3;
+package domain.backoffice.createPizzaCQRS3.command;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;

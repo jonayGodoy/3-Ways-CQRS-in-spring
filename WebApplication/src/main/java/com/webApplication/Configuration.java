@@ -1,7 +1,7 @@
-package app.cqrs;
+package com.webApplication;
 
-import infrastructure.MessageQueues.IMessageQueue;
-import infrastructure.MessageQueues.MessageQueue;
+import domain.backoffice.createPizzaCQRS2.command.infrastructure.messageQueues.IMessageQueue;
+import domain.backoffice.createPizzaCQRS2.command.infrastructure.messageQueues.MessageQueue;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.context.annotation.Bean;

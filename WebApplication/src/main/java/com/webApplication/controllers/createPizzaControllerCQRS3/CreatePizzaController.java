@@ -1,4 +1,4 @@
-package app.cqrs.controllers.createPizzaControllerCQRS3;
+package com.webApplication.controllers.createPizzaControllerCQRS3;
 
 import domain.backoffice.createPizzaCQRS3.command.AddPizzaRequestDto;
 import domain.backoffice.createPizzaCQRS3.command.CreatePizzaRequestEvent;

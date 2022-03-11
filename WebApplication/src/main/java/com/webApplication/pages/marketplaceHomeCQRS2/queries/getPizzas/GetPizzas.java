@@ -1,4 +1,4 @@
-package app.cqrs.pages.marketplaceHomeCQRS2.queries.getPizzas;
+package com.webApplication.pages.marketplaceHomeCQRS2.queries.getPizzas;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

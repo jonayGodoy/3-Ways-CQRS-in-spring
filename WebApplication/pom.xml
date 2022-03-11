@@ -8,7 +8,7 @@
         <version>2.6.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.proof-of-concept</groupId>
+    <groupId>com.webapplication</groupId>
     <artifactId>CQRS</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>CQRS</name>

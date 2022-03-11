@@ -1,7 +1,7 @@
-package domain.backoffice.createPizzaCQRS2;
+package domain.backoffice.createPizzaCQRS2.command;
 
 import backoffices.messages.PizzaCreatedEvent;
-import infrastructure.MessageQueues.IMessageQueue;
+import domain.backoffice.createPizzaCQRS2.command.infrastructure.messageQueues.IMessageQueue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

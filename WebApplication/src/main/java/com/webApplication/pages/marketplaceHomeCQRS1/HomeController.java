@@ -1,6 +1,6 @@
-package app.cqrs.pages.marketplaceHomeCQRS1;
+package com.webApplication.pages.marketplaceHomeCQRS1;
 
-import app.cqrs.pages.marketplaceHomeCQRS1.queries.getPizzas.GetPizzas;
+import com.webApplication.pages.marketplaceHomeCQRS1.queries.getPizzas.GetPizzas;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

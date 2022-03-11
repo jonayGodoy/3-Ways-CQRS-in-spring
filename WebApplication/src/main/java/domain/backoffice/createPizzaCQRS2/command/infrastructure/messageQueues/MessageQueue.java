@@ -1,4 +1,4 @@
-package infrastructure.MessageQueues;
+package domain.backoffice.createPizzaCQRS2.command.infrastructure.messageQueues;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;

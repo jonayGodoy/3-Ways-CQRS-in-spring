@@ -1,4 +1,4 @@
-package domain.backoffice.createPizzaCQRS2;
+package domain.backoffice.createPizzaCQRS2.command;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;

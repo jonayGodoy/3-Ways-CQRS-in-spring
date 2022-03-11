@@ -20,7 +20,7 @@
         <span>The finest pizzas</span>
     </header>
     <main>
-        <!--/*@thymesVar id="addPizzaRequestDto" type="backoffice.commands.createPizzaCQRS1.AddPizzaRequestDto"*/-->
+        <!--/*@thymesVar id="addPizzaRequestDto" type="domain.backoffice.createPizzaCQRS1.command.AddPizzaRequestDto"*/-->
         <form class="form"
               action="#"
               th:action="@{/backoffice1}"
@@ -40,7 +40,7 @@
             <div class="fields">
             </div>
         </form>
-        <!--/*@thymesVar id="pizzaResponseDto" type="backoffice.commands.createPizzaCQRS1.PizzaResponseDto"*/-->
+        <!--/*@thymesVar id="pizzaResponseDto" type="com.webApplication.controllers.createPizzaControllerCQRS1.PizzaResponseDto"*/-->
         <div th:if="${pizzaResponseDto != null}">
             <h3 th:text="${'La pizza '+pizzaResponseDto.getName()+', fue creada exitosamente'}"></h3>
         </div>

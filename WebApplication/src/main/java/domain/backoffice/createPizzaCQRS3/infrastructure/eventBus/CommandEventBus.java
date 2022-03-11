@@ -1,8 +1,8 @@
-package domain.backoffice.createPizzaCQRS3.createPizzaCQRS3.EventBus;
+package domain.backoffice.createPizzaCQRS3.infrastructure.eventBus;
 
-import domain.backoffice.createPizzaCQRS3.createPizzaCQRS3.CreatePizzaCommand;
-import domain.backoffice.createPizzaCQRS3.createPizzaCQRS3.CreatePizzaRequestEvent;
-import domain.backoffice.createPizzaCQRS3.createPizzaCQRS3.RequestEvent;
+import domain.backoffice.createPizzaCQRS3.command.CreatePizzaCommand;
+import domain.backoffice.createPizzaCQRS3.command.RequestEvent;
+import domain.backoffice.createPizzaCQRS3.command.CreatePizzaRequestEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

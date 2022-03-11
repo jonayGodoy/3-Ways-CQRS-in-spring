@@ -1,4 +1,4 @@
-package app.cqrs.pages.backofficeStatsCQRS3.queries;
+package com.webApplication.pages.backofficeStatsCQRS3.queries;
 
 public interface IBackofficeStatsRepository {
     BackofficeStats getStats();

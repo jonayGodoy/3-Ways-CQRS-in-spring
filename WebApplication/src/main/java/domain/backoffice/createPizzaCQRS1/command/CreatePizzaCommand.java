@@ -1,4 +1,4 @@
-package domain.backoffice.createPizzaCQRS1;
+package domain.backoffice.createPizzaCQRS1.command;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

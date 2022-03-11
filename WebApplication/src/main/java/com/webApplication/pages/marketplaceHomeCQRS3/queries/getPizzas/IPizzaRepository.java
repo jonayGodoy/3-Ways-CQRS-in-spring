@@ -1,4 +1,4 @@
-package app.cqrs.pages.marketplaceHomeCQRS3.queries.getPizzas;
+package com.webApplication.pages.marketplaceHomeCQRS3.queries.getPizzas;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package domain.backoffice.createPizzaCQRS3.createPizzaCQRS3.EventBus;
+package domain.backoffice.createPizzaCQRS3.infrastructure.eventBus;
 
-import domain.backoffice.createPizzaCQRS3.createPizzaCQRS3.RequestEvent;
+import domain.backoffice.createPizzaCQRS3.command.RequestEvent;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;

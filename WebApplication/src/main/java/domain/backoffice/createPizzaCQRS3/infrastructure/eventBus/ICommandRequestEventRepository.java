@@ -1,4 +1,4 @@
-package domain.backoffice.createPizzaCQRS3.createPizzaCQRS3.EventBus;
+package domain.backoffice.createPizzaCQRS3.infrastructure.eventBus;
 
 public interface ICommandRequestEventRepository {
 

@@ -1,4 +1,4 @@
-package app.cqrs.pages.marketplaceHomeCQRS3.queries.getPizzas;
+package com.webApplication.pages.marketplaceHomeCQRS3.queries.getPizzas;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;

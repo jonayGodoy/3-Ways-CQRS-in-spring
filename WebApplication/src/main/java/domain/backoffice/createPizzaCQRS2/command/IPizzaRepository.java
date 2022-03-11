@@ -1,4 +1,4 @@
-package domain.backoffice.createPizzaCQRS2;
+package domain.backoffice.createPizzaCQRS2.command;
 
 public interface IPizzaRepository {
 
