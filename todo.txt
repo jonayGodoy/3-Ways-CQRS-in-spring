@@ -1,17 +1,10 @@
 - create repositories in the migrator
 
-- use rabbitmq o something similar to cqrs3 in command bus or create new
-a version of cqrs
-
--do cqrs course o codelytv and add that version
-
 - separate infraesctructure and application layer to domain???
 
 - move queries to application layer o infraesctructure layer???
 
 - recuerda que no siempre se necesita rabbitmq y apuntalo en el readme
-
--eliminar el topic si es necesario y cambiar el exchange routing key 
 
 -añadir al readme, explicacion de cada estilo y añadir que la sync no necesita rabbitmq
 
