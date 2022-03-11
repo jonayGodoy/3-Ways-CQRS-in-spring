@@ -15,4 +15,4 @@ and it also allows better traceability because you can save all command request.
 docker-compose up
 
 # Start dev environment
-docker-compose -f docker-compose-dev.yml -p develoment_CQRS_environment up -d
+docker-compose -f docker-compose-dev.yml -p development_CQRS_environment up -d

@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 @Component("CreatePizzaCommand2")
 public class CreatePizzaCommand {
 
-    private IMessageQueue queue;
-    private PizzaRepository repository;
+    private final IMessageQueue queue;
+    private final PizzaRepository repository;
 
     @Autowired
     public CreatePizzaCommand(IMessageQueue queue, PizzaRepository repository) {

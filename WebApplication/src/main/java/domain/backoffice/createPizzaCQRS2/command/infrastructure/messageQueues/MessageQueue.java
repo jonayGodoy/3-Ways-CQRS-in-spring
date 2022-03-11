@@ -9,8 +9,6 @@ public class MessageQueue implements IMessageQueue {
 
     private final RabbitTemplate rabbitTemplate;
 
-    static final String topicExchangeName = "spring-boot-exchange";
-
     @Autowired
     public MessageQueue(RabbitTemplate rabbitTemplate) {
         this.rabbitTemplate = rabbitTemplate;
@@ -18,10 +16,8 @@ public class MessageQueue implements IMessageQueue {
 
     @Override
     public <T> SentEventUnit<T> sendA(T message) {
-
         rabbitTemplate.convertAndSend(
-                topicExchangeName,
-                "createdPizza",
+                message.getClass().getName(),
                 message);
         return SentEventUnit.CreateUnit(message);
     }
