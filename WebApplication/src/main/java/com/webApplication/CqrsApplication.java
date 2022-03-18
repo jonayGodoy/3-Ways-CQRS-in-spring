@@ -8,14 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
                 "com.webApplication.pages",
                 "com.webApplication.controllers",
                 "domain.marketplace",
-                "domain.backoffice"
+                "domain.backoffice",
+                "domain.share"
         }
 )
 public class CqrsApplication {
-
     public static void main(String[] args) {
-
         SpringApplication.run(CqrsApplication.class, args);
     }
-
 }

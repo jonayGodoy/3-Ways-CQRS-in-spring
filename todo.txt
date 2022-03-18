@@ -4,7 +4,7 @@ comentar que no hace falta cqrs aunque se quiera una base de datos de vista
 
 -marcar GetAllPizzasResponse como serializeable
 
-- 
+- @primary
 
 - create repositories in the view synchronizer
 

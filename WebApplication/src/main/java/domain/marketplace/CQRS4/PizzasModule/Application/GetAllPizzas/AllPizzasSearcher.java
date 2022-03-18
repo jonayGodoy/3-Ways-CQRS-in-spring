@@ -2,9 +2,9 @@ package domain.marketplace.CQRS4.PizzasModule.Application.GetAllPizzas;
 
 import domain.marketplace.CQRS4.PizzasModule.Domain.PizzaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class AllPizzasSearcher {
 
     private final PizzaRepository repository;
@@ -15,6 +15,9 @@ public class AllPizzasSearcher {
     }
 
     public GetAllPizzasResponse searchAll() {
-        repository.getAll();
+
+        return new GetAllPizzasResponse(repository.getAll().stream().map(
+                (pizza) -> new PizzaDto(pizza.getImg(), pizza.getName(), pizza.getPrice())
+        ).toList());
     }
 }
