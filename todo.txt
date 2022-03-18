@@ -1,4 +1,12 @@
-- create repositories in the migrator
+comentar que no hace falta cqrs aunque se quiera una base de datos de vista
+
+-añadir al query bus genericos en la respuesta
+
+-marcar GetAllPizzasResponse como serializeable
+
+- 
+
+- create repositories in the view synchronizer
 
 - separate infraesctructure and application layer to domain???
 
@@ -11,3 +19,7 @@
 -empezar a añadir la versión de codelytv de cqrs
 
 -añadir el readme,y de Command es un dto de Command del GoF (libro Design Patterns)
+
+-buscar una libreria de eventbus en memoria de java
+
+poner un diagrama en el readme de cada tipo de cqrs
