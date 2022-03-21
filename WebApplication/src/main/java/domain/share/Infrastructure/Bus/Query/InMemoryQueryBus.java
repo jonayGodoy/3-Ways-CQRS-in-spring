@@ -6,12 +6,12 @@ import domain.share.Domain.Bus.Query.Query;
 import domain.share.Domain.Bus.Query.QueryBus;
 import domain.share.Domain.Bus.Query.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.function.Function;
 
-@Component
+@Service
 public class InMemoryQueryBus implements QueryBus {
 
     private final GetAllPizzasQueryHandler getAllPizzasQueryHandler;

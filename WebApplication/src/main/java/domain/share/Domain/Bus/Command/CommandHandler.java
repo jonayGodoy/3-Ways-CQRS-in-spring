@@ -1,4 +1,5 @@
 package domain.share.Domain.Bus.Command;
 
-public class CommandHandler {
+public interface CommandHandler<C extends Command> {
+    void invoke(C command);
 }

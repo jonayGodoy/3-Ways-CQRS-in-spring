@@ -1,10 +1,17 @@
 package domain.marketplace.CQRS4.PizzasModule.Application.CreatePizza;
 
-public class CreatePizzaCommand {
+import domain.share.Domain.Bus.Command.Command;
+
+public class CreatePizzaCommand implements Command {
     private String img;
     private String name;
     private String price;
 
+    public CreatePizzaCommand(String img, String name, String price) {
+        this.img = img;
+        this.name = name;
+        this.price = price;
+    }
 
     public String getImg() {
         return img;

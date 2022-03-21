@@ -5,6 +5,11 @@ public class AddPizzaRequestDto {
     private String name;
     private String price;
 
+    public AddPizzaRequestDto() {
+        this.img = "";
+        this.name = "";
+        this.price = "";
+    }
 
     public String getImg() {
         return img;

@@ -9,9 +9,9 @@ public class HomeController {
 
     @GetMapping("/backoffice4")
     public ModelAndView home() {
-        return new ModelAndView(
-                "backoffice/homeCQRS4/index",
-                "addPizzaRequestDto",
-                new AddPizzaRequestDto());
+        var modelAndView = new ModelAndView("backoffice/homeCQRS4/index");
+        modelAndView.addObject("addPizzaRequestDto", new AddPizzaRequestDto());
+        modelAndView.addObject("createdPizzaSuccess", false);
+        return modelAndView;
     }
 }
