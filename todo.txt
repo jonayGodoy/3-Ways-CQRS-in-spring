@@ -4,9 +4,9 @@ comentar que no hace falta cqrs aunque se quiera una base de datos de vista
 
 -marcar GetAllPizzasResponse como serializeable
 
-- @primary
-
 - create repositories in the view synchronizer
+
+- renombrar el exchange a domain-events a nivel de aplicacion y que sea el binding quien redirija a la cola
 
 - separate infraesctructure and application layer to domain???
 
@@ -22,4 +22,6 @@ comentar que no hace falta cqrs aunque se quiera una base de datos de vista
 
 -buscar una libreria de eventbus en memoria de java
 
-poner un diagrama en el readme de cada tipo de cqrs
+-poner un diagrama en el readme de cada tipo de cqrs
+
+- anotar que el sistema de colas está hipersimplificado ya que no tiene ningún sistema para garantizar que los mensajes se procesen. Como base de batos para guardar errores al publicar y a consumir eventos, sistema de retreat de colas en caso de errores, cola donde se almacene los eventos muertos a causa de errores,etc
