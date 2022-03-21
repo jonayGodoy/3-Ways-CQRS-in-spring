@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Shop</title>
+    <link th:href="@{/css/backoffice-styles.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div>
+        <a th:href="@{/home1}">Marketplace1</a>
+        <a th:href="@{/backoffice1}">Backoffice1</a>
+        <a th:href="@{/home2}">Marketplace2</a>
+        <a th:href="@{/backoffice2}">Backoffice2</a>
+        <a th:href="@{/home3}">Marketplace3</a>
+        <a th:href="@{/backoffice3}">Backoffice3</a>
+        <a th:href="@{/backoffice3/stats}">Backoffice3 Stats</a>
+    </div>
+    <header class="header">
+        <h1>Pizza Shop Backoffices</h1>
+        <span>The finest pizzas</span>
+    </header>
+    <main>
+        <!--/*@thymesVar id="addPizzaRequestDto" type="domain.backoffice.createPizzaCQRS3.command.AddPizzaRequestDto"*/-->
+        <form class="form"
+              action="#"
+              th:action="@{/backoffice3}"
+              th:object="${addPizzaRequestDto}"
+              method="post">
+            <h2>Añade una nueva pizza</h2>
+            <label>Nombre: </label>
+            <input type="text" th:field="*{name}" required/>
+
+            <label>Precio: </label>
+            <input type="number" th:field="*{price}" required/>
+
+            <label>Imagen: </label>
+            <input type="text" th:field="*{img}" required/>
+
+            <button type="submit">Añadir nueva pizza</button>
+            <div class="fields">
+            </div>
+        </form>
+        <!--/*@thymesVar id="pizzaResponseDto" type="com.webApplication.controllers.createPizzaControllerCQRS1.PizzaResponseDto"*/-->
+        <div th:if="${pizzaResponseDto != null}">
+            <h3 th:text="${'La pizza '+pizzaResponseDto.getName()+', fue creada exitosamente'}"></h3>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
