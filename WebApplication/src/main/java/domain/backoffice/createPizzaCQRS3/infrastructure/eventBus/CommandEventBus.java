@@ -23,7 +23,7 @@ public class CommandEventBus {
         this.createPizzaCommand = createPizzaCommand;
     }
 
-    public <T> T RaiseEvent(RequestEvent request){
+    public <T> T raiseEvent(RequestEvent request){
         HashMap<Object, Function<RequestEvent, T>> subscriptions = generateMap();
         Function<RequestEvent, T> function = subscriptions.get(request.getClass());
         var result = function.apply(request);

@@ -26,7 +26,7 @@ public class CreatePizzaController {
             @ModelAttribute("addPizzaRequestDto") AddPizzaRequestDto dto,
             Model model){
         var request = CreatePizzaRequestEvent.create(dto);
-        Pizza pizza = bus.RaiseEvent(request);
+        Pizza pizza = bus.raiseEvent(request);
         return new ModelAndView(
                 "backoffice/homeCQRS3/index",
                 "pizzaResponseDto",
