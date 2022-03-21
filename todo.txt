@@ -1,5 +1,7 @@
 comentar que no hace falta cqrs aunque se quiera una base de datos de vista
 
+-usar uuid al crear pizzas
+
 -añadir al query bus genericos en la respuesta
 
 -marcar GetAllPizzasResponse como serializeable
@@ -25,3 +27,5 @@ comentar que no hace falta cqrs aunque se quiera una base de datos de vista
 -poner un diagrama en el readme de cada tipo de cqrs
 
 - anotar que el sistema de colas está hipersimplificado ya que no tiene ningún sistema para garantizar que los mensajes se procesen. Como base de batos para guardar errores al publicar y a consumir eventos, sistema de retreat de colas en caso de errores, cola donde se almacene los eventos muertos a causa de errores,etc
+
+-#refactor: move all AddPizzaRequestDto to application layer
