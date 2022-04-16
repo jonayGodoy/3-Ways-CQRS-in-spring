@@ -12,11 +12,13 @@ public class PizzaCreatedEventHandler {
     }
 
     public void handle(PizzaCreatedEvent event) {
+
         var pizza = new MongoTempPizza(
                 event.getImg(),
                 event.getName(),
                 event.getPrice());
         repository.save(pizza);
+        
     }
 }
 
