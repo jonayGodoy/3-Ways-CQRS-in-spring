@@ -1,3 +1,12 @@
+CREATE TABLE pizzaCreatedNotification
+(
+	id SERIAL,
+	pizzaName VARCHAR(255) NOT NULL,
+	notificationMessage VARCHAR(255) NOT NULL,
+	PRIMARY KEY(id)
+);
+
+
 CREATE TABLE commandRequestEvents
 (
 	id SERIAL,
