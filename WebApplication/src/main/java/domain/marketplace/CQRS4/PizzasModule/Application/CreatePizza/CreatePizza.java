@@ -15,8 +15,8 @@ public class CreatePizza {
         this.repository = repository;
     }
 
-    public void Execute(CreatePizzaCommand command){
-        var pizza = Pizza.Create(command);
+    public void Execute(String name, String price, String img){
+        var pizza = Pizza.Create(price, name, img);
         repository.createPizza(pizza);
     }
 }

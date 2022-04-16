@@ -1,7 +1,5 @@
 package domain.marketplace.CQRS4.PizzasModule.Domain;
 
-import domain.marketplace.CQRS4.PizzasModule.Application.CreatePizza.CreatePizzaCommand;
-
 public class Pizza {
     private final String img;
     private final String name;
@@ -13,9 +11,9 @@ public class Pizza {
         this.price = price;
     }
 
-    public static Pizza Create(CreatePizzaCommand command) {
-        var price = Float.parseFloat(command.getPrice());
-        return new Pizza(command.getImg(), command.getName(), price);
+    public static Pizza Create(String rawPrice, String name, String img) {
+        var price = Float.parseFloat(rawPrice);
+        return new Pizza(img, name, price);
     }
 
     public String getImg() {

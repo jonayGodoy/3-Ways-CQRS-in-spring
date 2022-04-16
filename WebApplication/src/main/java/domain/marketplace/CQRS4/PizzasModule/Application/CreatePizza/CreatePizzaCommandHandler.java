@@ -14,6 +14,6 @@ public class CreatePizzaCommandHandler implements CommandHandler<CreatePizzaComm
 
     @Override
     public void invoke(CreatePizzaCommand command) {
-        createPizza.Execute(command);
+        createPizza.Execute(command.getName(), command.getPrice(), command.getImg());
     }
 }
