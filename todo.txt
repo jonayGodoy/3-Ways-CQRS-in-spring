@@ -40,3 +40,5 @@ readme comentar que no hace falta cqrs aplicado en toda la aplicacion aunque se 
 -pensar en usar avro o asynapi, para enviar mensaje ademas de json o java serealizar
 o al menos comentarlo como alternativas en el readme 
 (schema-registry, la resposibilidad del versionada de mensajes en kafka)
+
+-comentar 
