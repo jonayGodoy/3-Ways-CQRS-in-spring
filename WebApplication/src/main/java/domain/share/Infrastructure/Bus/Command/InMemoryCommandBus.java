@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 import java.util.HashMap;
 import java.util.function.Consumer;
 
-@Primary
 @Component
 public class InMemoryCommandBus implements CommandBus {
 

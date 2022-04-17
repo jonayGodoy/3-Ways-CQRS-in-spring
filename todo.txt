@@ -1,10 +1,10 @@
+- todo: do all use cases transactional
+
 comentar que no hace falta cqrs aunque se quiera una base de datos de vista
 
 -usar uuid al crear pizzas
 
--añadir al query bus genericos en la respuesta
-
--marcar GetAllPizzasResponse como serializeable
+-marcar GetAllPizzasResponse, las queries y los command de cqrs4 como serializeable
 
 - create repositories in the view synchronizer
 
@@ -18,14 +18,25 @@ comentar que no hace falta cqrs aunque se quiera una base de datos de vista
 
 -añadir al readme, explicacion de cada estilo y añadir que la sync no necesita rabbitmq
 
--empezar a añadir la versión de codelytv de cqrs
-
--añadir el readme,y de Command es un dto de Command del GoF (libro Design Patterns)
-
--buscar una libreria de eventbus en memoria de java
-
 -poner un diagrama en el readme de cada tipo de cqrs
 
 - anotar que el sistema de colas está hipersimplificado ya que no tiene ningún sistema para garantizar que los mensajes se procesen. Como base de batos para guardar errores al publicar y a consumir eventos, sistema de retreat de colas en caso de errores, cola donde se almacene los eventos muertos a causa de errores,etc
 
 -#refactor: move all AddPizzaRequestDto to application layer
+
+- centralizar un exchange y generar una cola por caso de uso
+
+anotar esto en el juguete de cqrs
+eventsourcing, dos tablas para guardar el evento procesado y el evento procesado
+
+-crear un guion de cara a una charla (las colas son el demonio, si podeis tener cosas fuera de colas mejor)
+
+readme comentar que no hace falta cqrs aplicado en toda la aplicacion aunque se quiera una base de datos de vista
+
+-volver a ver los capitulos de rabbitmq de el curso de codely sobre java
+
+-quizas añadir grafana o alguna alternativa para monitorizar los mensajes de las colas
+
+-pensar en usar avro o asynapi, para enviar mensaje ademas de json o java serealizar
+o al menos comentarlo como alternativas en el readme 
+(schema-registry, la resposibilidad del versionada de mensajes en kafka)

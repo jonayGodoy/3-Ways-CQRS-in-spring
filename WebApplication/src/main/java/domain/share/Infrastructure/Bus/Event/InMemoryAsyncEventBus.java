@@ -1,9 +1,9 @@
-package domain.share.Infrastructure.Bus.Command;
+package domain.share.Infrastructure.Bus.Event;
 
 
-import domain.share.Domain.Bus.Command.Command;
-import domain.share.Domain.Bus.Command.CommandBus;
-import org.springframework.beans.factory.annotation.Autowired;
+import domain.share.Domain.Bus.Event.Event;
+import domain.share.Domain.Bus.Event.EventBus;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.Callable;
@@ -11,24 +11,22 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+@Primary
 @Component
-public class InMemoryAsyncCommandBus implements CommandBus {
-
-    @Autowired
-    private final InMemoryCommandBus commandBus;
+public class InMemoryAsyncEventBus implements EventBus {
 
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
+    private final InMemoryEventBus eventBus;
 
-    public InMemoryAsyncCommandBus(InMemoryCommandBus commandBus) {
-        this.commandBus = commandBus;
+    public InMemoryAsyncEventBus(InMemoryEventBus eventBus) {
+        this.eventBus = eventBus;
     }
 
     @Override
-    public <C extends Command> void dispatch(C command){
-        Runnable runnable = () -> {commandBus.dispatch(command);};
+    public <E extends Event> void dispatch(E event){
+        Runnable runnable = () -> {eventBus.dispatch(event);};
         Future<Void> future = executorService.submit(new Dispatcher(runnable));
     }
-
 }
 
 class Dispatcher implements Callable<Void> {

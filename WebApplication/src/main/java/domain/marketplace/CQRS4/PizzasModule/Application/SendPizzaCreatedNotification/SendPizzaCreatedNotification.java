@@ -1,7 +1,9 @@
 package domain.marketplace.CQRS4.PizzasModule.Application.SendPizzaCreatedNotification;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class SendPizzaCreatedNotification {
 
     @Autowired
